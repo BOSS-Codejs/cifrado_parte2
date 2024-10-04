@@ -19,7 +19,7 @@ const HeaderNav = () => {
           <h1 className="headerh1">Encriptación</h1>
         </div>
         <nav className={`nav ${isOpen ? "open" : ""}`}>
-          {isOpen ? <MenuMOvil /> : <MenuWeb />}
+          {isOpen ? <MenuMOvil toggleMenu={toggleMenu} /> : <MenuWeb />}
         </nav>
         <div className="menu-icon" onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
@@ -90,7 +90,7 @@ const MenuWeb = () => {
   );
 };
 
-const MenuMOvil = () => {
+const MenuMOvil = ({ toggleMenu }) => {
   const [isDropdownOpen1, setDropdownOpen1] = useState(false);
   const [isDropdownOpen2, setDropdownOpen2] = useState(false);
 
@@ -109,35 +109,42 @@ const MenuMOvil = () => {
           <button onClick={toggleDropdown1} className="menu-btn">
             Métodos de encriptación
           </button>
-          <ul className="dropdown">
-            <Link to={"/"}>
-              <li className="text">Método de cifrado Escilata</li>
-            </Link>
-            <Link to={"/Cesar"}>
-              <li className="text">Método de cifrado César</li>
-            </Link>
-            <Link to={"/EdDsa"}>
-              <li className="text">Método de cifrado EdDSA</li>
-            </Link>
-            <Link to={"/Rc5"}>
-              <li className="text">Método de cifrado RC5</li>
-            </Link>
-            <Link to={"/Hash"}>
-              <li className="text">Método de cifrado HASH tiger</li>
-            </Link>
-          </ul>
+          {isDropdownOpen1 && (
+            <ul className="dropdown">
+              <Link to={"/"} onClick={toggleMenu}>
+                <li className="text">Método de cifrado Escilata</li>
+              </Link>
+              <Link to={"/Cesar"} onClick={toggleMenu}>
+                <li className="text">Método de cifrado César</li>
+              </Link>
+              <Link to={"/EdDsa"} onClick={toggleMenu}>
+                <li className="text">Método de cifrado EdDSA</li>
+              </Link>
+              <Link to={"/Rc5"} onClick={toggleMenu}>
+                <li className="text">Método de cifrado RC5</li>
+              </Link>
+              <Link to={"/Hash"} onClick={toggleMenu}>
+                <li className="text">Método de cifrado HASH tiger</li>
+              </Link>
+            </ul>
+          )}
         </li>
         <li>
           <button onClick={toggleDropdown2} className="menu-btn">
             Documentación
           </button>
-          <ul className="dropdown">
-            <li>
-              <a href="https://drive.google.com/drive/folders/1cPQw0l98ZHL3dSM1ILYmit2yBoqIr5HH?usp=sharing">
-                Comparación de métodos
-              </a>
-            </li>
-          </ul>
+          {isDropdownOpen2 && (
+            <ul className="dropdown">
+              <li>
+                <a
+                  href="https://drive.google.com/drive/folders/1cPQw0l98ZHL3dSM1ILYmit2yBoqIr5HH?usp=sharing"
+                  onClick={toggleMenu}
+                >
+                  Comparación de métodos
+                </a>
+              </li>
+            </ul>
+          )}
         </li>
       </ul>
     </>
