@@ -112,7 +112,7 @@ const MenuMOvil = ({ toggleMenu }) => {
           {isDropdownOpen1 && (
             <ul className="dropdown">
               <Link to={"/"} onClick={toggleMenu}>
-                <li className="text">Método de cifrado Escilata</li>
+                <li className="text">{">"}Método de cifrado Escilata</li>
               </Link>
               <Link to={"/Cesar"} onClick={toggleMenu}>
                 <li className="text">Método de cifrado César</li>
