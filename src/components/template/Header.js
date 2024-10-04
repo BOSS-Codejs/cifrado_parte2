@@ -77,7 +77,10 @@ const MenuWeb = () => {
             <ul className="dropdown">
               <li>
                 {" "}
-                <a href="https://drive.google.com/drive/folders/1cPQw0l98ZHL3dSM1ILYmit2yBoqIr5HH?usp=sharing"> Comparación de métodos</a>
+                <a href="https://drive.google.com/drive/folders/1cPQw0l98ZHL3dSM1ILYmit2yBoqIr5HH?usp=sharing">
+                  {" "}
+                  Comparación de métodos
+                </a>
               </li>
             </ul>
           )}
@@ -106,15 +109,23 @@ const MenuMOvil = () => {
           <button onClick={toggleDropdown1} className="menu-btn">
             Métodos de encriptación
           </button>
-          {isDropdownOpen1 && (
-            <ul className="dropdown">
-              <li>Subtema 1</li>
-              <li>Subtema 2</li>
-              <li>Subtema 3</li>
-              <li>Subtema 4</li>
-              <li>Subtema 5</li>
-            </ul>
-          )}
+          <ul className="dropdown">
+            <Link to={"/"}>
+              <li className="text">Método de cifrado Escilata</li>
+            </Link>
+            <Link to={"/Cesar"}>
+              <li className="text">Método de cifrado César</li>
+            </Link>
+            <Link to={"/EdDsa"}>
+              <li className="text">Método de cifrado EdDSA</li>
+            </Link>
+            <Link to={"/Rc5"}>
+              <li className="text">Método de cifrado RC5</li>
+            </Link>
+            <Link to={"/Hash"}>
+              <li className="text">Método de cifrado HASH tiger</li>
+            </Link>
+          </ul>
         </li>
         <li>
           <button onClick={toggleDropdown2} className="menu-btn">
