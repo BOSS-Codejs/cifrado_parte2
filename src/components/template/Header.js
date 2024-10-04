@@ -131,12 +131,13 @@ const MenuMOvil = () => {
           <button onClick={toggleDropdown2} className="menu-btn">
             Documentación
           </button>
-          {isDropdownOpen2 && (
-            <ul className="dropdown">
-              <li>Subtema 1</li>
-              <li>Subtema 2</li>
-            </ul>
-          )}
+          <ul className="dropdown">
+            <li>
+              <a href="https://drive.google.com/drive/folders/1cPQw0l98ZHL3dSM1ILYmit2yBoqIr5HH?usp=sharing">
+                Comparación de métodos
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </>
