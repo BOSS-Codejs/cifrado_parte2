@@ -119,6 +119,13 @@
     .menu-icon {
       display: block;
     }
+
+    .dropdown li {
+      padding: 10px;
+      white-space: nowrap;
+      margin-left: 20px;
+    }
+  
 }
 
 /* Estilos generales del pie de página */
