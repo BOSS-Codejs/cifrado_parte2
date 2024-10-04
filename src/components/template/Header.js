@@ -112,19 +112,19 @@ const MenuMOvil = ({ toggleMenu }) => {
           {isDropdownOpen1 && (
             <ul className="dropdown">
               <Link to={"/"} onClick={toggleMenu}>
-                <li className="text">{">"}Método de cifrado Escilata</li>
+                <li className="text">{"> "}Método de cifrado Escilata</li>
               </Link>
               <Link to={"/Cesar"} onClick={toggleMenu}>
-                <li className="text">Método de cifrado César</li>
+                <li className="text">{"> "}Método de cifrado César</li>
               </Link>
               <Link to={"/EdDsa"} onClick={toggleMenu}>
-                <li className="text">Método de cifrado EdDSA</li>
+                <li className="text"> {"> "}Método de cifrado EdDSA</li>
               </Link>
               <Link to={"/Rc5"} onClick={toggleMenu}>
-                <li className="text">Método de cifrado RC5</li>
+                <li className="text">{"> "}Método de cifrado RC5</li>
               </Link>
               <Link to={"/Hash"} onClick={toggleMenu}>
-                <li className="text">Método de cifrado HASH tiger</li>
+                <li className="text">{"> "}Método de cifrado HASH tiger</li>
               </Link>
             </ul>
           )}
